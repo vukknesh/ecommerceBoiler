@@ -12,16 +12,16 @@ const mapStateToProps = state => {
 class BillingAddress extends Component {
   state = {
     addresses: [
-      // {
-      //     "id": 1,
-      //     "address_name": "address1",
-      //     "address_line_1": "12 Lovely Avenue",
-      //     "address_line_2": "sdfsaf",
-      //     "country": "United Kingdom",
-      //     "city": "London",
-      //     "postcode": "EC1 4YI",
-      //     "owner": 1
-      // }
+      {
+        id: 1,
+        address_name: "address1",
+        address_line_1: "12 Lovely Avenue",
+        address_line_2: "sdfsaf",
+        country: "United Kingdom",
+        city: "London",
+        postcode: "EC1 4YI",
+        owner: 1
+      }
     ]
   };
 

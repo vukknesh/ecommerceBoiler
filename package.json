@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
-    "dev": "webpack --mode development --watch ./frontend/src/index.js --output ./frontend/static/33.js",
-    "build": "webpack --mode production ./frontend/src/index.js --output ./frontend/static/33.js"
+    "dev": "webpack --mode development --watch ./frontend/src/index.js --output ./frontend/static/22.js",
+    "build": "webpack --mode production ./frontend/src/index.js --output ./frontend/static/22.js"
   },
   "author": "",
   "license": "ISC",

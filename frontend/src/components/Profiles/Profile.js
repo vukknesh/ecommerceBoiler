@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Link } from "react-router-dom";
 
 import { connect } from "react-redux";
-import * as auth from "../../store/actions/auth";
+import * as auth from "../../store/actions/authActions";
 
 import PersonalDetails from "./PersonalDetails";
 import BillingAddress from "./BillingAddress";
@@ -16,8 +16,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onAuth: (username, password) =>
-      dispatch(auth.authLogin(username, password))
+    onAuth: (username, password) => dispatch(auth.authLogin(username, password))
   };
 };
 
@@ -41,11 +40,11 @@ class Profile extends Component {
               </ul>
             </div>
             <div className="col-md-9">
-            <Switch>
-              <PrivateRoute exact path="/" component={PersonalDetails} />
-              <PrivateRoute path="/billing" component={BillingAddress} />
-              <PrivateRoute path="/delivery" component={DeliveryAddress} />
-            </Switch>
+              <Switch>
+                <PrivateRoute exact path="/" component={PersonalDetails} />
+                <PrivateRoute path="/billing" component={BillingAddress} />
+                <PrivateRoute path="/delivery" component={DeliveryAddress} />
+              </Switch>
             </div>
           </div>
         </Router>

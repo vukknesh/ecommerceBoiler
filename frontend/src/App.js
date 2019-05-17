@@ -22,9 +22,12 @@ import Footer from "./components/Layout/Footer";
 import About from "./components/Layout/About";
 import Default from "./components/Layout/Default";
 
+import { apiKey } from "./config/config";
+
 import ProductList from "./components/Products/ProductList";
 import ProductDetails from "./components/Products/ProductDetails";
 import SearchResults from "./components/Products/SearchResults";
+import Profile from "./components/Profiles/Profile";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -101,7 +104,7 @@ class App extends Component {
 
   render() {
     return (
-      <StripeProvider apiKey="pk_test_98h6BlkmMyr1e4dxSECsllZH00ch9G988z">
+      <StripeProvider apiKey={apiKey}>
         <Elements>
           <ScrollToTop>
             <Navbar />
@@ -111,7 +114,7 @@ class App extends Component {
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />
                 {/* <Route exact path="/password_reset" component={PasswordReset} /> */}
-                {/* <PrivateRoute path="/profile" component={Profile} /> */}
+                <PrivateRoute path="/profile" component={Profile} />
                 <Route exact path="/product/:slug" component={ProductDetails} />
                 <Route exact path="/search/:query" component={SearchResults} />
                 <Route exact path="/cart" component={Cart} />

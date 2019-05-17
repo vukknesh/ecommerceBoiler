@@ -3,6 +3,7 @@
 .vscode
 env
 venv
+config
 # dependencies
 /node_modules
 /.pnp
