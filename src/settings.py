@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'rest_auth.registration',
 
-    'crispy_forms',
+    
     'corsheaders',
    
     'rest_framework',
@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     # 'addresses',
  
 ]
+SITE_ID = 1
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
